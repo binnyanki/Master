@@ -8,10 +8,16 @@ import org.testng.annotations.Test;
 public class Runner extends FrameworkClass {
 	
   @Test
-  public void Search(Method m) {
+  public void Search() {
 	  
-	  logger=report.createTest(m.getName());
-	  driver.get(Utils.loadProperty().getProperty("URL"));
+	  try {
+		  driver.get(Utils.loadProperty().getProperty("URL"));
+		  throw new Exception("There is an exception");
+	} catch (Exception e) {
+		failureCount=failureCount+1;
+		e.printStackTrace();
+		logger.fail(e.toString());
+	}
   }
   
 }

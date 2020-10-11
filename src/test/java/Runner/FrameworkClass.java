@@ -1,6 +1,7 @@
 package Runner;
 
 import java.io.File;
+import java.lang.reflect.Method;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,6 +23,7 @@ public class FrameworkClass {
 	ExtentReports report;
 	ExtentHtmlReporter extent;
 	ExtentTest logger;
+	int failureCount=0;
 	@BeforeSuite
 	public void beforeSuite()
 	{
@@ -32,8 +34,9 @@ public class FrameworkClass {
 		
 	}
 	@BeforeMethod
-	public void beforeMethod()
+	public void beforeMethod(Method m)
 	{
+		logger=report.createTest(m.getName());
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
 	}
@@ -45,6 +48,15 @@ public class FrameworkClass {
 	@AfterMethod
 	public void afterMethod(ITestResult result)
 	{
+		if((result.getStatus()==ITestResult.SUCCESS)&&(failureCount==0))
+		{
+			logger.pass("Testcase passed");
+		}
+		if((result.getStatus()==ITestResult.FAILURE)||(failureCount!=0))
+		{
+			logger.fail("Testcase failed");
+			failureCount=0;
+		}
 		
 		report.flush();
 		driver.quit();
