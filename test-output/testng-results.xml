@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10177" started-at="2020-10-11T16:41:04Z" finished-at="2020-10-11T16:41:14Z">
+  <suite name="Suite" duration-ms="38198" started-at="2020-10-11T17:17:33Z" finished-at="2020-10-11T17:18:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10177" started-at="2020-10-11T16:41:04Z" finished-at="2020-10-11T16:41:14Z">
+    <test name="Test" duration-ms="38198" started-at="2020-10-11T17:17:33Z" finished-at="2020-10-11T17:18:11Z">
       <class name="Runner.Runner">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:Runner.Runner@3d299e3]" name="beforeSuite" is-config="true" duration-ms="225" started-at="2020-10-11T22:11:03Z" finished-at="2020-10-11T22:11:04Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:Runner.Runner@3b2da18f]" name="beforeSuite" is-config="true" duration-ms="236" started-at="2020-10-11T22:47:33Z" finished-at="2020-10-11T22:47:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Runner.Runner@3d299e3]" name="beforeMethod" is-config="true" duration-ms="2491" started-at="2020-10-11T22:11:04Z" finished-at="2020-10-11T22:11:06Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Runner.Runner@3b2da18f]" name="beforeMethod" is-config="true" duration-ms="2563" started-at="2020-10-11T22:47:33Z" finished-at="2020-10-11T22:47:36Z">
           <params>
             <param index="0">
               <value>
@@ -22,26 +22,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="Search()[pri:0, instance:Runner.Runner@3d299e3]" name="Search" duration-ms="5480" started-at="2020-10-11T22:11:06Z" finished-at="2020-10-11T22:11:12Z">
+        <test-method status="PASS" signature="Search()[pri:0, instance:Runner.Runner@3b2da18f]" name="Search" duration-ms="33856" started-at="2020-10-11T22:47:36Z" finished-at="2020-10-11T22:48:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Search -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Runner.Runner@3d299e3]" name="afterMethod" is-config="true" duration-ms="2182" started-at="2020-10-11T22:11:12Z" finished-at="2020-10-11T22:11:14Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Runner.Runner@3b2da18f]" name="afterMethod" is-config="true" duration-ms="1755" started-at="2020-10-11T22:48:10Z" finished-at="2020-10-11T22:48:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Search status=SUCCESS method=Runner.Search()[pri:0, instance:Runner.Runner@3d299e3] output={null}]]]>
+                <![CDATA[[TestResult name=Search status=SUCCESS method=Runner.Search()[pri:0, instance:Runner.Runner@3b2da18f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:Runner.Runner@3d299e3]" name="afterSuite" is-config="true" duration-ms="0" started-at="2020-10-11T22:11:14Z" finished-at="2020-10-11T22:11:14Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:Runner.Runner@3b2da18f]" name="afterSuite" is-config="true" duration-ms="1" started-at="2020-10-11T22:48:12Z" finished-at="2020-10-11T22:48:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- Runner.Runner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

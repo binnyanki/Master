@@ -2,9 +2,11 @@ package Runner;
 
 import java.io.File;
 import java.lang.reflect.Method;
+import java.util.Collections;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -23,6 +25,7 @@ public class FrameworkClass {
 	ExtentReports report;
 	ExtentHtmlReporter extent;
 	ExtentTest logger;
+	ChromeOptions options;
 	int failureCount=0;
 	@BeforeSuite
 	public void beforeSuite()
@@ -38,7 +41,16 @@ public class FrameworkClass {
 	{
 		logger=report.createTest(m.getName());
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");
-		driver = new ChromeDriver();
+		options = new ChromeOptions();
+		options.addArguments("test-type");
+		options.addArguments("start-maximized");
+		options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+		options.setExperimentalOption("useAutomationExtension", false);
+		options.addArguments("--disable-popup-blocking");
+		options.addArguments("--disable-notifications");
+		
+		
+		driver = new ChromeDriver(options);
 	}
 	@AfterSuite
 	public void afterSuite()
