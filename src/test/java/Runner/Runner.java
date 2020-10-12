@@ -12,7 +12,8 @@ public class Runner extends FrameworkClass {
 	  
 	  try {
 		  driver.get(Utils.loadProperty().getProperty("URL"));
-		  throw new Exception("There is an exception");
+		  logger.addScreenCaptureFromPath(Utils.takeScreenshot(driver));
+		  
 	} catch (Exception e) {
 		failureCount=failureCount+1;
 		e.printStackTrace();

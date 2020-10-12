@@ -4,9 +4,10 @@
 <listeners>
 <listener class-name="Runner.ListenerClass"/>
 </listeners>
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name="Test" >
     <classes>
       <class name="Runner.Runner"/>
     </classes>
   </test> <!-- Test -->
+  
 </suite> <!-- Suite -->

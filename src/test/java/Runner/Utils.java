@@ -7,9 +7,13 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 
 public class Utils {
@@ -146,6 +150,20 @@ public class Utils {
 		}
 		
 		return status;	
+	}
+	public static String takeScreenshot(WebDriver driver)
+	{ 
+		String desPath = System.getProperty("user.dir")+"\\Screenshot\\image.png";
+		try {
+			TakesScreenshot scrshot = (TakesScreenshot) driver;
+			File srcfile=scrshot.getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(srcfile, new File(desPath));
+		} catch (WebDriverException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return desPath;
 	}
 	
 	
