@@ -17,7 +17,7 @@ public class BusinessFunctions extends FrameworkClass{
 		logger.addScreenCaptureFromPath(Library.takeScreenshot(driver));
 		Library.setText(driver, ObjectRepository.searchTextbox, data.get("ProductValue"));
 		Library.Click(driver, ObjectRepository.searchBtn);
-		Library.isDisplayed(driver, ObjectRepository.shopByDisplaySizeText);
+		//Library.isDisplayed(driver, ObjectRepository.shopByDisplaySizeText);
 		logger.addScreenCaptureFromPath(Library.takeScreenshot(driver));
 		//softAssert.assertAll();
 	}
@@ -25,9 +25,9 @@ public class BusinessFunctions extends FrameworkClass{
 	{
 		Library.launchApplication(driver);
 		logger.addScreenCaptureFromPath(Library.takeScreenshot(driver));
-		Library.setText(driver, ObjectRepository.searchTextbox, "laptop");
+		Library.setText(driver, ObjectRepository.searchTextbox, data.get("ProductValue"));
 		Library.Click(driver, ObjectRepository.searchBtn);
-		Library.isDisplayed(driver, ObjectRepository.shopByDisplaySizeText);
+		//Library.isDisplayed(driver, ObjectRepository.shopByDisplaySizeText);
 		logger.addScreenCaptureFromPath(Library.takeScreenshot(driver));
 		//softAssert.assertAll();
 	}

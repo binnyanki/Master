@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="48182" started-at="2020-10-14T01:02:33 IST" finished-at="2020-10-14T01:03:21 IST">
+  <suite name="Suite" duration-ms="27765" started-at="2020-10-14T01:11:48 IST" finished-at="2020-10-14T01:12:16 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="48182" started-at="2020-10-14T01:02:33 IST" finished-at="2020-10-14T01:03:21 IST">
+    <test name="Test" duration-ms="27765" started-at="2020-10-14T01:11:48 IST" finished-at="2020-10-14T01:12:16 IST">
       <class name="Runner.Runner">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:Runner.Runner@6a79c292]" name="beforeSuite" is-config="true" duration-ms="1094" started-at="2020-10-14T01:02:32 IST" finished-at="2020-10-14T01:02:33 IST">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:Runner.Runner@6a79c292]" name="beforeSuite" is-config="true" duration-ms="1099" started-at="2020-10-14T01:11:47 IST" finished-at="2020-10-14T01:11:48 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Runner.Runner@6a79c292]" name="beforeTest" is-config="true" duration-ms="8" started-at="2020-10-14T01:02:33 IST" finished-at="2020-10-14T01:02:33 IST">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Runner.Runner@6a79c292]" name="beforeTest" is-config="true" duration-ms="7" started-at="2020-10-14T01:11:48 IST" finished-at="2020-10-14T01:11:48 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Runner.Runner@6a79c292]" name="beforeMethod" is-config="true" duration-ms="2903" started-at="2020-10-14T01:02:33 IST" finished-at="2020-10-14T01:02:36 IST">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Runner.Runner@6a79c292]" name="beforeMethod" is-config="true" duration-ms="2874" started-at="2020-10-14T01:11:48 IST" finished-at="2020-10-14T01:11:51 IST">
           <params>
             <param index="0">
               <value>
@@ -26,11 +26,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="searchIpad()[pri:0, instance:Runner.Runner@6a79c292]" name="searchIpad" duration-ms="10197" started-at="2020-10-14T01:02:36 IST" finished-at="2020-10-14T01:02:46 IST">
+        <test-method status="PASS" signature="searchIpad()[pri:0, instance:Runner.Runner@6a79c292]" name="searchIpad" duration-ms="7925" started-at="2020-10-14T01:11:51 IST" finished-at="2020-10-14T01:11:59 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchIpad -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Runner.Runner@6a79c292]" name="afterMethod" is-config="true" duration-ms="2393" started-at="2020-10-14T01:02:46 IST" finished-at="2020-10-14T01:02:49 IST">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Runner.Runner@6a79c292]" name="afterMethod" is-config="true" duration-ms="1554" started-at="2020-10-14T01:11:59 IST" finished-at="2020-10-14T01:12:01 IST">
           <params>
             <param index="0">
               <value>
@@ -41,7 +41,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Runner.Runner@6a79c292]" name="beforeMethod" is-config="true" duration-ms="1933" started-at="2020-10-14T01:02:49 IST" finished-at="2020-10-14T01:02:51 IST">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Runner.Runner@6a79c292]" name="beforeMethod" is-config="true" duration-ms="1919" started-at="2020-10-14T01:12:01 IST" finished-at="2020-10-14T01:12:03 IST">
           <params>
             <param index="0">
               <value>
@@ -52,11 +52,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="searchLaptop()[pri:0, instance:Runner.Runner@6a79c292]" name="searchLaptop" duration-ms="29330" started-at="2020-10-14T01:02:51 IST" finished-at="2020-10-14T01:03:20 IST">
+        <test-method status="PASS" signature="searchLaptop()[pri:0, instance:Runner.Runner@6a79c292]" name="searchLaptop" duration-ms="12405" started-at="2020-10-14T01:12:03 IST" finished-at="2020-10-14T01:12:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchLaptop -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Runner.Runner@6a79c292]" name="afterMethod" is-config="true" duration-ms="1362" started-at="2020-10-14T01:03:20 IST" finished-at="2020-10-14T01:03:21 IST">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Runner.Runner@6a79c292]" name="afterMethod" is-config="true" duration-ms="1016" started-at="2020-10-14T01:12:15 IST" finished-at="2020-10-14T01:12:16 IST">
           <params>
             <param index="0">
               <value>
@@ -67,7 +67,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:Runner.Runner@6a79c292]" name="afterSuite" is-config="true" duration-ms="26397" started-at="2020-10-14T01:03:21 IST" finished-at="2020-10-14T01:03:48 IST">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:Runner.Runner@6a79c292]" name="afterSuite" is-config="true" duration-ms="1" started-at="2020-10-14T01:12:16 IST" finished-at="2020-10-14T01:12:16 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
