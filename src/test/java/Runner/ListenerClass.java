@@ -4,7 +4,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class ListenerClass implements ITestListener {
+public class ListenerClass extends FrameworkClass implements ITestListener {
 
 	public void onTestStart(ITestResult result) {
 
@@ -24,6 +24,7 @@ public class ListenerClass implements ITestListener {
 
 	public void onTestSkipped(ITestResult result) {
 		System.out.println("Test case "+result.getName()+" is SKIPPED");
+		System.out.println(result.getThrowable());
 		
 	}
 

@@ -1,11 +1,14 @@
 package Runner;
 
 import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -31,26 +34,42 @@ public class FrameworkClass {
 	WebDriver driver;
 	ExtentReports report;
 	ExtentHtmlReporter extent;
-	ExtentTest logger;
+	static ExtentTest logger;
 	ChromeOptions options = new ChromeOptions();
 	DesiredCapabilities capabilities = new DesiredCapabilities();
 	List<String> failurelist = new LinkedList<String>();
+	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
+	 Map<String,String> datamap = new LinkedHashMap<String,String>();
 	int failureCount=0;
 	int retryCount=2;
 	static int retry =0;
-	@BeforeSuite
-	public void beforeSuite()
+	static boolean retryflag = false;
+	@BeforeSuite(alwaysRun = true)
+	public  void beforeSuite()
 	{
-		Utils.loadProperty();
-		extent = new ExtentHtmlReporter(new File("./Reports/Report.html"));
-		extent.config().setDocumentTitle("Automation Report");
-		extent.config().setReportName("Functional Report");
-		report=new ExtentReports();
-		report.attachReporter(extent);
+		Library.loadTestData();
+		Library.loadProperty();
+		if(retryflag==false)
+		{
+			extent = new ExtentHtmlReporter(new File("./Reports/Report.html"));
+			extent.config().setDocumentTitle("Automation Report");
+			extent.config().setReportName("Functional Report");
+			report=new ExtentReports();
+			report.attachReporter(extent);
+		}
+		else
+		{
+			extent = new ExtentHtmlReporter(new File("./Reports/ReportRetryTestCases.html"));
+			extent.config().setDocumentTitle("Automation Report");
+			extent.config().setReportName("Functional Report");
+			report=new ExtentReports();
+			report.attachReporter(extent);
+		}
+		
 		
 	}
-	@BeforeTest
-	public void beforeTest()
+	@BeforeTest(alwaysRun = true)
+	public  void beforeTest()
 	{
 		options.addArguments("test-type");
 		options.addArguments("start-maximized");
@@ -61,19 +80,21 @@ public class FrameworkClass {
 		capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 	}
-	@BeforeMethod
-	public void beforeMethod(Method m)
+	@BeforeMethod(alwaysRun = true)
+	public  void beforeMethod(Method m)
 	{
 		logger=report.createTest(m.getName());
+		datamap = Library.loadTestCaseData(m.getName());
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");	
 		driver = new ChromeDriver(capabilities);
 	}
-	@AfterSuite
-	public void afterSuite()
+	@AfterSuite(alwaysRun = true)
+	public  void afterSuite()
 	{
 		if(!failurelist.isEmpty())
 		{ 
-			;
+			retryflag=true;
+			System.out.println("--------This is Retry Mechanism----------");
 			while(retry<retryCount)
 			{
 				retry++;
@@ -85,18 +106,21 @@ public class FrameworkClass {
 				
 			}
 			failurelist.clear();
+			retryflag=false;
 		}
 	}
-	@AfterMethod
-	public void afterMethod(ITestResult result)
+	@AfterMethod(alwaysRun = true)
+	public  void afterMethod(ITestResult result) throws Exception
 	{ 
 		if((result.getStatus()==ITestResult.SUCCESS)&&(failureCount==0))
 		{
 			logger.pass("Test Case " +result.getName()+" is Passed");
 		}
 		if((result.getStatus()==ITestResult.FAILURE)||(failureCount!=0))
-		{
+		{ 
+			logger.addScreenCaptureFromPath(Library.takeScreenshot(driver));
 			logger.fail("Test Case " +result.getName()+" is Failed");
+			//logger.fail(result.getThrowable());
 			failureCount=0;
 			failurelist.add(result.getName());
 		}

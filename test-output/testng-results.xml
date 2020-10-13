@@ -1,41 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="114" started-at="2020-10-12T17:42:25Z" finished-at="2020-10-12T17:42:25Z">
+  <suite name="Suite" duration-ms="48182" started-at="2020-10-14T01:02:33 IST" finished-at="2020-10-14T01:03:21 IST">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="106" started-at="2020-10-12T17:42:25Z" finished-at="2020-10-12T17:42:25Z">
-      <class name="Runner.ParallelTest">
-        <test-method status="PASS" signature="test1()[pri:0, instance:Runner.ParallelTest@5ef60048]" name="test1" duration-ms="20" started-at="2020-10-12T23:12:25Z" finished-at="2020-10-12T23:12:25Z">
+    <test name="Test" duration-ms="48182" started-at="2020-10-14T01:02:33 IST" finished-at="2020-10-14T01:03:21 IST">
+      <class name="Runner.Runner">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:Runner.Runner@6a79c292]" name="beforeSuite" is-config="true" duration-ms="1094" started-at="2020-10-14T01:02:32 IST" finished-at="2020-10-14T01:02:33 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="test2()[pri:0, instance:Runner.ParallelTest@5ef60048]" name="test2" duration-ms="3" started-at="2020-10-12T23:12:25Z" finished-at="2020-10-12T23:12:25Z">
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Runner.Runner@6a79c292]" name="beforeTest" is-config="true" duration-ms="8" started-at="2020-10-14T01:02:33 IST" finished-at="2020-10-14T01:02:33 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test2 -->
-        <test-method status="PASS" signature="test3()[pri:0, instance:Runner.ParallelTest@5ef60048]" name="test3" duration-ms="8" started-at="2020-10-12T23:12:25Z" finished-at="2020-10-12T23:12:25Z">
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Runner.Runner@6a79c292]" name="beforeMethod" is-config="true" duration-ms="2903" started-at="2020-10-14T01:02:33 IST" finished-at="2020-10-14T01:02:36 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Runner.Runner.searchIpad()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test3 -->
-      </class> <!-- Runner.ParallelTest -->
-    </test> <!-- Test1 -->
-    <test name="Test2" duration-ms="114" started-at="2020-10-12T17:42:25Z" finished-at="2020-10-12T17:42:25Z">
-      <class name="Runner.ParallelTest2">
-        <test-method status="PASS" signature="test4()[pri:0, instance:Runner.ParallelTest2@6295d394]" name="test4" duration-ms="19" started-at="2020-10-12T23:12:25Z" finished-at="2020-10-12T23:12:25Z">
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="searchIpad()[pri:0, instance:Runner.Runner@6a79c292]" name="searchIpad" duration-ms="10197" started-at="2020-10-14T01:02:36 IST" finished-at="2020-10-14T01:02:46 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test4 -->
-        <test-method status="PASS" signature="test5()[pri:0, instance:Runner.ParallelTest2@6295d394]" name="test5" duration-ms="27" started-at="2020-10-12T23:12:25Z" finished-at="2020-10-12T23:12:25Z">
+        </test-method> <!-- searchIpad -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Runner.Runner@6a79c292]" name="afterMethod" is-config="true" duration-ms="2393" started-at="2020-10-14T01:02:46 IST" finished-at="2020-10-14T01:02:49 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchIpad status=SUCCESS method=Runner.searchIpad()[pri:0, instance:Runner.Runner@6a79c292] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test5 -->
-        <test-method status="PASS" signature="test6()[pri:0, instance:Runner.ParallelTest2@6295d394]" name="test6" duration-ms="4" started-at="2020-10-12T23:12:25Z" finished-at="2020-10-12T23:12:25Z">
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Runner.Runner@6a79c292]" name="beforeMethod" is-config="true" duration-ms="1933" started-at="2020-10-14T01:02:49 IST" finished-at="2020-10-14T01:02:51 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Runner.Runner.searchLaptop()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test6 -->
-      </class> <!-- Runner.ParallelTest2 -->
-    </test> <!-- Test2 -->
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="searchLaptop()[pri:0, instance:Runner.Runner@6a79c292]" name="searchLaptop" duration-ms="29330" started-at="2020-10-14T01:02:51 IST" finished-at="2020-10-14T01:03:20 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchLaptop -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Runner.Runner@6a79c292]" name="afterMethod" is-config="true" duration-ms="1362" started-at="2020-10-14T01:03:20 IST" finished-at="2020-10-14T01:03:21 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchLaptop status=SUCCESS method=Runner.searchLaptop()[pri:0, instance:Runner.Runner@6a79c292] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:Runner.Runner@6a79c292]" name="afterSuite" is-config="true" duration-ms="26397" started-at="2020-10-14T01:03:21 IST" finished-at="2020-10-14T01:03:48 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- Runner.Runner -->
+    </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
