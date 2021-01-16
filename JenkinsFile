@@ -1,0 +1,40 @@
+pipeline{
+ 
+ agent any
+ tools{
+	maven 'M3'
+ 
+ }
+ stages{
+ 
+	stage('Build'){
+	
+		steps{
+			echo "Building Project"
+			bat "mvn clean"
+		}
+	}
+	stage('Test'){
+	
+		steps{
+			echo "Building Project"
+			bat "mvn test"
+		}
+	}
+	stage('Deploy'){
+	
+		steps{
+			echo "Building Project"
+			bat "mvn verify"
+		}
+	}
+	
+ 
+ 
+ 
+ 
+ }
+
+
+
+}

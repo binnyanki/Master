@@ -22,8 +22,10 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.codoid.products.exception.FilloException;
 import com.codoid.products.fillo.Connection;
@@ -81,6 +83,10 @@ public class Library {
 		}		
 		return e;
 		
+	}
+	public static String getElementName(WebDriver driver, String object)
+	{
+		return getElement(driver,object).getText();
 	}
 	public static void Click(WebDriver driver, String object)
 	{
@@ -202,6 +208,12 @@ public class Library {
 			     }
 			   });
 			return element;
+	}
+	//	WebDriverWait(Webdriver driver,long) is deprecated. Instead use WebDriverWait(Webdriver driver,Duration)
+	public static void waitElement(WebDriver driver, String object)
+	{
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(object)));
 	}
 	public static void loadTestData()
 	{
