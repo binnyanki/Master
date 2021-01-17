@@ -19,9 +19,11 @@ public class BusinessFunctions extends FrameworkClass{
 		Library.Click(driver, ObjectRepository.searchBtn);
 		//Library.isDisplayed(driver, ObjectRepository.shopByDisplaySizeText);
 		logger.addScreenCaptureFromPath(Library.takeScreenshot(driver));
+
 		if(Library.isDisplayed(driver, ObjectRepository.shopByDisplaySizeText))
 		{
 			logger.info(Library.getElementName(driver, ObjectRepository.shopByDisplaySizeText)+" is displayed");
+
 		}
 		Library.waitElement(driver,ObjectRepository.SevenInchesBtn);
 		//Library.Click(driver, ObjectRepository.SevenInchesBtn);
