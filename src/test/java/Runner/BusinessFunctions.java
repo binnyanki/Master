@@ -21,10 +21,10 @@ public class BusinessFunctions extends FrameworkClass{
 		logger.addScreenCaptureFromPath(Library.takeScreenshot(driver));
 		if(Library.isDisplayed(driver, ObjectRepository.shopByDisplaySizeText))
 		{
-			logger.info(Library.getElementName(driver, ObjectRepository.shopByDisplaySizeText)+" is diaplayed");
+			logger.info(Library.getElementName(driver, ObjectRepository.shopByDisplaySizeText)+" is displayed");
 		}
 		Library.waitElement(driver,ObjectRepository.SevenInchesBtn);
-		Library.Click(driver, ObjectRepository.SevenInchesBtn);
+		//Library.Click(driver, ObjectRepository.SevenInchesBtn);
 		//softAssert.assertAll();
 	}
 	public static void searchLaptop(WebDriver driver, Map<String,String> data) throws Exception 

@@ -200,7 +200,7 @@ public class Library {
 	public static WebElement waitForElement(WebDriver driver,  final String object) throws Exception
 	{
 		
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(30)).pollingEvery(Duration.ofSeconds(2)).ignoring(NoSuchElementException.class);
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(30, TimeUnit.SECONDS).pollingEvery(2, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
 
 			   WebElement element = wait.until(new Function<WebDriver, WebElement>() {
 			     public WebElement apply(WebDriver driver) {
@@ -212,8 +212,8 @@ public class Library {
 	//	WebDriverWait(Webdriver driver,long) is deprecated. Instead use WebDriverWait(Webdriver driver,Duration)
 	public static void waitElement(WebDriver driver, String object)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(object)));
+		WebDriverWait wait = new WebDriverWait(driver,5);
+		wait.until(ExpectedConditions.elementToBeClickable(Library.getElement(driver, object))).click();
 	}
 	public static void loadTestData()
 	{
