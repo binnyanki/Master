@@ -3,7 +3,7 @@ pipeline{
  agent any
  tools{
 	maven 'M3'
- 	jdk 'JDK 1.8'
+ 	jdk "jdk-1.8.0_182"
  }
  stages{
  
@@ -17,14 +17,14 @@ pipeline{
 	stage('Test'){
 	
 		steps{
-			echo "Building Project"
+			echo "Test Project"
 			bat "mvn test"
 		}
 	}
 	stage('Deploy'){
 	
 		steps{
-			echo "Building Project"
+			echo "Verify Project"
 			bat "mvn verify"
 		}
 	}
